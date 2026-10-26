@@ -1,0 +1,193 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2ek63irxlemg"]
+
+[ext_resource type="Script" uid="uid://m10uuhwkmhm0" path="res://start_menu.gd" id="1_v2mkm"]
+[ext_resource type="Texture2D" uid="uid://dd1mprphk25ra" path="res://12345.jpg" id="1_vpdu5"]
+[ext_resource type="FontFile" uid="uid://burpnbvqpm5iy" path="res://Sunshine.otf" id="2_v2mkm"]
+
+[node name="Start Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_v2mkm")
+
+[node name="Beground" type="Sprite2D" parent="."]
+position = Vector2(583, 322)
+scale = Vector2(1.84375, 1.29885)
+texture = ExtResource("1_vpdu5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 7.0
+offset_right = 799.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_v2mkm")
+theme_override_font_sizes/font_size = 90
+text = "PREDATOR  GEME"
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 257.0
+offset_right = 526.0
+offset_bottom = 297.0
+
+[node name="mulai" type="Button" parent="MainContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Mulai"
+
+[node name="option" type="Button" parent="MainContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Option"
+
+[node name="EXit" type="Button" parent="MainContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Exsit"
+
+[node name="OptionContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 506.0
+offset_top = 296.0
+offset_right = 847.0
+offset_bottom = 558.0
+
+[node name="TabContainer" type="TabContainer" parent="OptionContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+current_tab = 0
+
+[node name="VIDIO" type="TabBar" parent="OptionContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="generat" type="Label" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 34.0
+offset_right = 84.0
+offset_bottom = 57.0
+text = "reselution"
+
+[node name="reselution" type="Label" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 69.0
+offset_bottom = 27.0
+text = "Generat"
+
+[node name="OptionButton" type="OptionButton" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 60.0
+offset_right = 146.0
+offset_bottom = 91.0
+item_count = 5
+popup/item_0/text = "640 x 480"
+popup/item_0/id = 0
+popup/item_1/text = "800 x 600"
+popup/item_1/id = 1
+popup/item_2/text = "1024 x 768 768"
+popup/item_2/id = 2
+popup/item_3/text = "1280 x 720"
+popup/item_3/id = 3
+popup/item_4/text = "1366 x 768"
+popup/item_4/id = 4
+
+[node name="Label" type="Label" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 96.0
+offset_right = 75.0
+offset_bottom = 119.0
+text = "Graphics"
+
+[node name="HSlider" type="HSlider" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 142.0
+offset_right = 250.0
+offset_bottom = 158.0
+
+[node name="Label" type="Label" parent="OptionContainer/TabContainer/VIDIO/HSlider"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -19.0
+offset_right = 253.0
+offset_bottom = 7.0
+text = "low  medium higt veryhigt ultra"
+
+[node name="window mode" type="Label" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 1.0
+offset_right = 333.0
+offset_bottom = 24.0
+text = "window mode"
+
+[node name="CheckButton" type="CheckButton" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 48.0
+
+[node name="Label2" type="Label" parent="OptionContainer/TabContainer/VIDIO"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 26.0
+offset_right = 280.0
+offset_bottom = 49.0
+text = "Fullscreen"
+
+[node name="AUDIO" type="TabBar" parent="OptionContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="OptionContainer/TabContainer/AUDIO"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "General Volume "
+
+[node name="HScrollBar" type="HScrollBar" parent="OptionContainer/TabContainer/AUDIO"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 129.0
+offset_bottom = 39.0
+
+[node name="Label2" type="Label" parent="OptionContainer/TabContainer/AUDIO"]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 22.0
+offset_right = 182.0
+offset_bottom = 45.0
+text = "50%"
+
+[node name="OTHER" type="TabBar" parent="OptionContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Apply" type="Button" parent="OptionContainer/HBoxContainer"]
+layout_mode = 2
+text = "Apply"
+
+[node name="Back" type="Button" parent="OptionContainer/HBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="MainContainer/mulai" to="." method="_on_mulai_pressed"]
+[connection signal="pressed" from="MainContainer/option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MainContainer/EXit" to="." method="_on_e_xit_pressed"]

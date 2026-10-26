@@ -1,0 +1,9 @@
+# Godot 4+ .gitignore
+.godot/
+*.translation
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
